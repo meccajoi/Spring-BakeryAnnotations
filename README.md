@@ -190,5 +190,40 @@
 	* class must be a annotated with `@Controller`
  
  
+## Completed Implementation
 
+The application provides CRUD operations for Baker and Muffin objects.
+
+### Baker Endpoints
+
+- `GET /bakers/` – View all bakers
+- `GET /bakers/{id}` – View one baker
+- `POST /bakers/` – Create a baker
+- `PUT /bakers/{id}` – Update a baker
+- `DELETE /bakers/{id}` – Delete a baker
+
+### Muffin Endpoints
+
+- `GET /muffins/` – View all muffins
+- `GET /muffins/{id}` – View one muffin
+- `POST /muffins/` – Create a muffin
+- `PUT /muffins/{id}` – Update a muffin
+- `DELETE /muffins/{id}` – Delete a muffin
+
+### Annotation Decisions
+
+- `@Entity` identifies Baker and Muffin as database entities.
+- `@Id` identifies each entity's primary key.
+- `@GeneratedValue` automatically generates IDs.
+- `@Service` registers the service classes with Spring.
+- `@Autowired` provides repository dependencies to the services.
+- `@Controller` registers the controller classes.
+- `@RequestMapping` connects HTTP requests to controller methods.
+- `@PathVariable` retrieves an ID from the URL.
+- `@RequestBody` converts incoming JSON into a Java object.
+
+### Verification
+
+- All 13 Maven tests pass.
+- Baker and Muffin CRUD endpoints were verified using Postman.
 
